@@ -159,3 +159,17 @@ flex-basis: 35%;
 {
     display: block;
 }
+
+/* ------services------ */
+
+#services{
+    padding: 30px 0;
+
+}
+
+.service-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1 fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
