@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Porfolio Website - Antoine M. Johnson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>DEVELOPER</p>
+            <h1>I'm <span id="a">A</span>ntoine <span id="j">J</span>ohnson<br> From Louisville</h1>
+        </div>
+    </div>
+<!-- -------------about------------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Selfie2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Results-oriented and detail-driven professional with a proven track record in logistics, B2B/B2C sales, and management. Known for adeptly coordinating operational activities, implementing sales strategies, and providing exceptional customer service. Possesses strong leadership skills with experience in staff supervision, training, and development. Eager to leverage recent IT University New Developers Bootcamp completion, adding a dynamic blend of technical expertise to drive innovation in software development.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java Development:</span><br>
+                            Proficient in Java 11<br>
+                            Writing readable and maintainable code<br>
+                            Applying defensive coding practices<br>
+                            Implementing Java refactoring best practices
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li><span>Front-End Web Development:</span><br>
+                            HTML5, CSS, and JavaScript fundamentals<br>
+                            Creating responsive and user-friendly interfaces<br>
+                            Working with JavaScript modules<br>
+                            Implementing JavaScript promises and asynchronous programming
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                    <li><span>DevOps and Tools:</span><br>
+                        Continuous Integration and Continuous Delivery (CI/CD) with Jenkins<br>
+                        Understanding NoSQL databases<br>
+                        Using version control with tools like Git<br>
+                        Debugging in Visual Studio 2019
+                    </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li><span>Containerization:</span><br>
+                            Fundamental understanding of container platforms like OpenShift and Kubernetes
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li><span>Other Technical Skills:</span><br>
+                            Maven and Gradle build tool fundamentals<br>
+                            SQL Server database fundamentals<br>
+                            Google Cloud Platform familiarity
+                        </li>
+                    </ul>                    
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>Experience:</span><br>
+                            Results-oriented professional with a diverse background in logistics, B2B/B2C sales, and management<br>
+                            Adept in coordinating operational activities, implementing sales strategies, and delivering exceptional customer service<br>
+                            Strong leadership skills demonstrated through staff supervision, training, and development<br>
+                            Recent completion of IT University New Developers Bootcamp, adding a dynamic blend of technical expertise to drive innovation in software development
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>Educational:</span><br>
+                            Bachelor of Arts in International Business from Berkely College, White Plains, NY (2005)<br>
+                            Proficient in MS Word, Excel, PowerPoint, Access, and Internet usage<br>
+                            Recently completed UPS IT University New Developers Bootcamp, gaining hands-on expertise in Java development, front-end web development, DevOps tools, containerization, and other technical skills
+                        </li>
+                    </ul>          
+                </div>    
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }    
+        for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+        }    
+</script>
+</body>
+</html>
