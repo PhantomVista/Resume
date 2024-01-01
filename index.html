@@ -191,6 +191,7 @@
                     <textarea name="Message" rows="6" placeholder="Your Massage"></textarea>
                     <button type="submit" class="btn btn2">Submit</button> 
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -226,11 +227,16 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx1bitmSRyNwBHb0UajssmGklnRQMY1AlT3f_Anw5DxM5Bu6JUOdnLmup7h6pgIkbloGw/exec'
     const form = document.forms['submit-to-google-sheet']
-  
+    const msg = document.getElementById("msg")
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = "Message Sent!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()})
         .catch(error => console.error('Error!', error.message))
     })
   </script>
