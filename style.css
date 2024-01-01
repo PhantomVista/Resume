@@ -311,3 +311,7 @@ flex-basis: 35%;
 .contact-right{
     flex-basis: 60%;
 }
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
